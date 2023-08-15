@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { StarIcon } from '@heroicons/react/24/solid'
+import { StarIcon } from '@heroicons/react/24/solid';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // CAROUSEL DATA
 
@@ -19,39 +21,53 @@ interface DataType {
 }
 
 const postData: DataType[] = [
-    // {
-    //     heading: 'Software Engineering',
-    //     heading2: '',
-    //     name: "Conestoga college",
-    //     imgSrc: '/assets/courses/courseone.png',
-    //     students: 150,
-    //     classes: 12,
-    //     price: 20,
-    //     rating: 4.7,
-    // },
-    // {
-    //     heading: 'Design system Diploma',
-    //     heading2: '',
-    //     name: "Seneca college",
-    //     imgSrc: '/assets/courses/coursetwo.png',
-    //     students: 130,
-    //     classes: 12,
-    //     price: 20,
-    //     rating: 4.7,
-    // },
-    // {
-    //     heading: 'IT Diploma',
-    //     heading2: '',
-    //     name: "Niagara college",
-    //     imgSrc: '/assets/courses/coursethree.png',
-    //     students: 120,
-    //     classes: 12,
-    //     price: 20,
-    //     rating: 4.7,
-    // },
+    {
+        heading: 'Software Engineering',
+        heading2: '',
+        name: "Conestoga college",
+        imgSrc: '/assets/courses/courseone.png',
+        students: 150,
+        classes: 12,
+        price: 20,
+        rating: 4.7,
+    },
+    {
+        heading: 'Design system Diploma',
+        heading2: '',
+        name: "Seneca college",
+        imgSrc: '/assets/courses/coursetwo.png',
+        students: 130,
+        classes: 12,
+        price: 20,
+        rating: 4.7,
+    },
+    {
+        heading: 'IT Diploma',
+        heading2: '',
+        name: "Niagara college",
+        imgSrc: '/assets/courses/coursethree.png',
+        students: 120,
+        classes: 12,
+        price: 20,
+        rating: 4.7,
+    },
     
     
 ]
+const handleCardClick = () => {
+  // Trigger the toast message
+  toast.success('Card clicked!', {
+    position: 'top-right',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
+  // You can perform any other necessary actions here
+};
 
 // CAROUSEL SETTINGS
 
@@ -104,7 +120,7 @@ export default class MultipleItems extends Component {
 
                     <Slider {...settings}>
                         {postData.map((items, i) => (
-                            <div key={i}>
+                            <div key={i} onClick={() => handleCardClick()}>
 
                                 <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl'>
                                     <div className="relative rounded-3xl">
@@ -120,6 +136,7 @@ export default class MultipleItems extends Component {
 
                                         <div>
                                             <h3 className='text-base font-normal pt-6 opacity-75'>{items.name}</h3>
+                                            
                                         </div>
 
                                         <div className="flex justify-between items-center py-6">
