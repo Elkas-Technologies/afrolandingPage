@@ -13,8 +13,8 @@ export default function Home() {
       <Banner />
       <Courses />
       <Companies />
-      {/* <Mentor /> 
-        <Testimonials /> */}
+      <Mentor /> 
+        {/* <Testimonials /> */}
       <Newsletter />
     </main>
   )

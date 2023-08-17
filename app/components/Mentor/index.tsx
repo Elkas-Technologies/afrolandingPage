@@ -15,17 +15,17 @@ const postData: DataType[] = [
     {
         profession: 'CEO',
         name: 'Elias Gemechu',
-        imgSrc: '/assets/mentor/elias.jpg',
+        imgSrc: '/assets/mentor/eliasG.png',
     },
     {
-        profession: 'Marketing',
-        name: 'Jonatan X',
-        imgSrc: '/assets/mentor/user2.png',
+        profession: 'Marketing Agent Ethiopia',
+        name: 'Yonatan Tsegaye',
+        imgSrc: '/assets/mentor/yoni.png',
     },
     {
-        profession: 'Marketing',
-        name: 'Aster',
-        imgSrc: '/assets/mentor/user1.png',
+        profession: ' ',
+        name: '',
+        imgSrc: '',
     },
     
 ]
@@ -62,7 +62,7 @@ export default class MultipleItems extends Component {
         const settings = {
             dots: false,
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             // centerMode: true,
             slidesToScroll: 1,
             arrows: false,
@@ -115,12 +115,10 @@ export default class MultipleItems extends Component {
                             <div key={i}>
                                 <div className='m-3 py-14 md:my-10 text-center'>
                                     <div className="relative">
-                                        <Image src={items.imgSrc} alt="user-image" width={306} height={0} className="inline-block m-auto" />
-                                        <div className="absolute right-[84px] bottom-[102px] bg-white rounded-full p-4">
-                                            <Image src={'/assets/mentor/linkedin.svg'} alt="linkedin-image" width={25} height={24} />
-                                        </div>
+                                        <Image src={items.imgSrc} alt="user-image" width={200} height={50} className="inline-block m-auto" />
+                                      
                                     </div>
-                                    <div className="-mt-10">
+                                    <div className="-mt-50">
                                         <h3 className='text-2xl font-semibold text-lightblack'>{items.name}</h3>
                                         <h4 className='text-lg font-normal text-lightblack pt-2 opacity-50'>{items.profession}</h4>
                                     </div>
