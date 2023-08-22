@@ -85,7 +85,7 @@ const Register = () => {
                                                     Register your account
                                                 </h2> */}
                                                 <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-                                                  Register your Interest 
+                                                  Register Here
                                                 </h2>
                                             </div>
              <form onSubmit={registerUser}>
@@ -191,7 +191,7 @@ const Register = () => {
 
             <div className="col-span-full">
               <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
-                Area of Intersr
+                Area of Interest
               </label>
               <div className="mt-2">
                 <input
@@ -217,7 +217,7 @@ const Register = () => {
       </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
+        <button type="button" className="text-sm font-semibold leading-6 text-gray-900" onClick={closeModal}>
           Cancel
         </button>
         <button
@@ -234,7 +234,7 @@ const Register = () => {
                                     </div>
 
 
-                                    <div className="mt-4 flex justify-end">
+                                    {/* <div className="mt-4 flex justify-end">
                                         <button
                                             type="button"
                                             className="inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-blue-900 "
@@ -242,7 +242,7 @@ const Register = () => {
                                         >
                                             Got it, thanks!
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
