@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 8080",
     "gcp-build": "npm run build",
-    "deploy": "gcloud config set project afrobrave && gcloud app deploy app.yaml --version=0-1-0",
+    "deploy": "gcloud config set project 172174883264 && gcloud app deploy app.yaml --version=0-1-0",
     "lint": "next lint"
   },
   "dependencies": {
